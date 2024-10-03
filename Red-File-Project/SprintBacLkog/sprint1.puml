@@ -1,0 +1,13 @@
+@startuml Diagram
+left to right direction
+
+rectangle "Sprint 1" {
+
+    Add -- (Sign up / Login)
+    Add -- (Fill Service Request Form)
+    Add -- (Add Car Problem Description)
+    Add -- (Select Service Type)
+    Add -- (Submit Request)
+}
+
+@enduml
