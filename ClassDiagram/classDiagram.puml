@@ -1,0 +1,44 @@
+@startuml
+class User {
+    +int id
+    +String name
+    +String email
+    +String password
+    +void signUp()
+    +void login()
+    +void updateProfile()
+}
+
+class Technician extends User {
+    +void viewRequests()
+    +void updateServiceStatus()
+}
+
+class Customer extends User {
+    +void requestService()
+}
+
+class ServiceRequest {
+    +int requestId
+    +String carProblem
+    +String serviceType
+    +double estimatedPrice
+    +String status
+    +Date requestDate
+    +Customer customer
+    +Technician technician
+    +void submitRequest()
+    +void updateRequestStatus()
+}
+
+class Notification {
+    +int notificationId
+    +String message
+    +Date sentDate
+    +void sendNotification()
+}
+
+Customer "1" -- "0..*" ServiceRequest
+Technician "1" -- "0..*" ServiceRequest
+User "0..*" -- "0..*" Notification
+@enduml
