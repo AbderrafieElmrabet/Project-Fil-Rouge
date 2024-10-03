@@ -1,0 +1,10 @@
+@startuml Diagram
+left to right direction
+
+rectangle "Sprint 2" {
+    Add -- (Receive Confirmation)
+    Add -- (Review Service)
+    Add -- (Receive Service Request)
+}
+
+@enduml
